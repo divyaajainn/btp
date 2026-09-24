@@ -1,0 +1,37 @@
+{
+  "seed": 7,
+  "paths": {
+    "work_dir": "outputs/synthetic_smoke",
+    "manifest_csv": "outputs/synthetic_smoke/manifest.csv",
+    "features_npz": "outputs/synthetic_smoke/features.npz"
+  },
+  "synthetic": {
+    "subjects": 6,
+    "trials_per_subject": 4,
+    "windows_per_trial": 3,
+    "eeg_dim": 10,
+    "face_dim": 8
+  },
+  "labels": {
+    "target": "valence",
+    "threshold": 5.0,
+    "midpoint_policy": "drop"
+  },
+  "split": {
+    "val_subjects": 1,
+    "test_subjects": 1
+  },
+  "training": {
+    "model": "concat",
+    "epochs": 8,
+    "batch_size": 8,
+    "learning_rate": 0.01,
+    "hidden_dim": 32,
+    "embedding_dim": 16,
+    "patience": 4,
+    "device": "cpu",
+    "modality_dropout": 0.0,
+    "adv_lambda": 0.0
+  }
+}
+
